@@ -12,7 +12,10 @@ export interface ITripdata {
   travelTime: number;
 }
 export async function getTripData(): Promise<ITripdata[]> {
-  const browser = await puppeteer.launch({ headless: true });
+  const browser = await puppeteer.launch({
+    headless: true,
+    args: ['--single-process'], // Required for CircleCI
+  });
   console.log('opening new tab');
   const page = await browser.newPage();
   console.log('Opening carnet login');
