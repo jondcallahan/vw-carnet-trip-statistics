@@ -36,9 +36,9 @@ export async function appendData(rawData: ITripdata[]) {
   const newData = discardEarlierValues(latestId, rawData);
   // Data cleansing: remove tripDate since it is a less descriptive / dupe of dateTime
   const formattedData = deleteDate(newData);
+  console.log('Pushing updates: ', formattedData);
   // Data formatting: put into a two-dimensional array so G Sheets can understand it
   const values = convertTo2dArray(formattedData);
-  console.log('Pusing updates: ', values);
   return await sheets.spreadsheets.values.append({
     spreadsheetId: process.env.SHEETS_SHEET_ID,
     range: 'Sheet1',
