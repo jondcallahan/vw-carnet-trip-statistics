@@ -15,6 +15,9 @@ export async function getTripData(): Promise<ITripdata[]> {
   const browser = await puppeteer.launch({
     headless: true,
     args: ['--single-process'], // Required for CircleCI
+    env: {
+      TZ: 'America/Los_Angeles',
+    },
   });
   console.log('opening new tab');
   const page = await browser.newPage();
