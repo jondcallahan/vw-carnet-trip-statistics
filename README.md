@@ -2,7 +2,7 @@
 
 Log your trip data for your Carnet equipped Volkswagen to a Google sheet.
 
-[image:./sample.png]
+!(Image of data in Google Sheet)[sample.png]
 
 ---
 
