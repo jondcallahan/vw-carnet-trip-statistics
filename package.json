@@ -1,7 +1,13 @@
 {
   "name": "vw-trip-statistics",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/index.ts",
+  "author": {
+    "name": "Jon Callahan"
+  },
+  "repository": {
+    "url": "https://github.com/jondcallahan/vw-carnet-trip-statistics"
+  },
   "license": "MIT",
   "scripts": {
     "start": "ts-node src/index.ts"
