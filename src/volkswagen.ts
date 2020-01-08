@@ -17,7 +17,7 @@ export interface ITripdata {
 }
 export async function getTripData(): Promise<ITripdata[]> {
   const browser = await puppeteer.launch({
-    headless: true,
+    headless: false,
     args: ['--single-process'], // Required for CircleCI
     env: {
       TZ: 'America/Los_Angeles',
@@ -35,6 +35,7 @@ export async function getTripData(): Promise<ITripdata[]> {
   await page.keyboard.type(CARNET_PASSWORD);
   await page.keyboard.press('Enter');
   await page.waitForNavigation();
+  await sleep(5000);
   console.log('selecting car from garage');
   const garageButton = await page.$('a.nav-arrow');
   await garageButton.click();
