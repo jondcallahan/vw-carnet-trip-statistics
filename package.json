@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "dotenv": "^6.2.0",
-    "googleapis": "^36.0.0",
+    "googleapis": "^39.1.0",
     "puppeteer": "^1.13.0",
     "ts-node": "^7.0.1",
     "typescript": "^3.2.2"
